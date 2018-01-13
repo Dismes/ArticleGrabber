@@ -41,8 +41,8 @@ app.get("/all", function (req, res) {
         else {
             
             createArrayForList(found);
-            //console.log(articleArray);
-            res.redirect("/");
+
+           res.redirect("/");
         }
     });
 });
@@ -50,7 +50,7 @@ app.get("/all", function (req, res) {
 function createArrayForList(json) {
     var n = 0;
     json.forEach(element => {
-        articleArray += "<div class='row' id=" + json[n].title +"> <p>" + json[n].title + "</p></row>";
+        articleArray += "<div class='row' id=" + json[n].title +"> <p>" + json[n].title + "</p></div>";
         n++;
     });
 }
@@ -77,12 +77,13 @@ app.get("/scrape", function (req, res) {
                             console.log(err);
                         } else {
 
-                            console.log(inserted);
+                            //console.log(inserted);
                         }
                     });
             }
-            res.redirect("/");
+        
         });
+        res.redirect("/");
     });
 
 });
@@ -93,10 +94,8 @@ app.get("/", function (req, res) {
         Article: articleArray
     }]
     res.render("index", Articles[0]);
-    console.log(Articles[0]);
-    console.log("asdf")
 
-    //res.send(console.log("holy fuck this should woek"));
+
 });
 
 // Listen on port 3000

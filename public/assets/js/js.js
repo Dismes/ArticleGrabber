@@ -4,12 +4,13 @@ $(function () {
 
     });
     $(document).on("click", "p", function () {
-
+        
         console.log("I CLIKC THIS");
         // Empty the notes from the note section
         $("#notes").empty();
         // Save the id from the p tag
         var thisId = $(this).attr("id");
+        console.log(thisId);
         $("#notes").append("<h2>" + thisId + "</h2>");
         // An input to enter a new title
         $("#notes").append("<input id='titleinput' name='title' >");
