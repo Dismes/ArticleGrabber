@@ -14,17 +14,27 @@
 	<div class="jumbotron text-center">
 		<h1>Scapper</h1>
 	</div>
-	<div class="container">
-		<a href="scrape">
-			<button id="ScrapeButoon" type="button" class="btn btn-danger">Scape Data!</button>
-		</a>
-		<a href = "all">
-			<button id="ScrapeButoon" type="button" class="btn btn-danger">Show articles</button>
-		</a>
+	<div class="wrapper">
+		<div class="row">
+			<a href="scrape">
+				<button id="ScrapeButoon" type="button" class="btn btn-danger">Scape Data!</button>
+			</a>
+			<a href="all">
+				<button id="ScrapeButoon" type="button" class="btn btn-danger">Show articles</button>
+			</a>
+		</div>
+		<div>
+			<div class="col-sm-6">
+				{{{ body }}}
+			</div>
+		</div>
 	</div>
-	{{{ body }}}
+
+
+
 </body>
 <footer>
+	<link rel="stylesheet" href="/assets/css/css.css">
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
 	 crossorigin="anonymous"></script>

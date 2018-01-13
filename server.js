@@ -50,7 +50,7 @@ app.get("/all", function (req, res) {
 function createArrayForList(json) {
     var n = 0;
     json.forEach(element => {
-        articleArray += "<div class='row'> " + json[n].title + "</row>";
+        articleArray += "<div class='row'> <p>" + json[n].title + "</p></row>";
         n++;
     });
 }
